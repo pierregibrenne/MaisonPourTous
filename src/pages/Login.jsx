@@ -3,6 +3,8 @@ import { supabase } from "../client";
 import { Link, useNavigate } from "react-router-dom";
 import imageMomo from "../assets/imageMomo.png";
 import testLogo from "../assets/testLogo.jpg";
+import mpt from "../assets/mpt.png";
+import logoOfficiel from "../assets/logoOfficiel.png";
 const Login = ({ setToken }) => {
   let navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -44,8 +46,8 @@ const Login = ({ setToken }) => {
         />
       </div>
       <div className="w-2/5 flex flex-col justify-center items-center p-10 bg-white rounded-md shadow-md mt-8 mb-8 mr-8 border border-gray-300">
-        <img src={testLogo} alt="image" />
-        <h3 className="mb-4 text-black text-2xl font-mono">Maison Pour Tous</h3>
+        <img width={200} src={logoOfficiel} alt="image" /> <br />
+        <h3 className="mb-4 text-black text-2xl font-mono">Connexion</h3>
         <form onSubmit={handleSubmit} className="mb-4 w-full">
           <div className="relative">
             <svg
@@ -68,7 +70,7 @@ const Login = ({ setToken }) => {
           </div>
           <div className="relative">
             <svg
-              className="w-6 h-6 text-gray-500 dark:text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+              className="w-4 h-4 text-gray-500 dark:text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -96,7 +98,7 @@ const Login = ({ setToken }) => {
             Connexion
           </button>
         </form>
-        <p className="text-black">
+        <p className="text-sm font-light text-gray-500 dark:text-gray-400">
           Tu n'as pas de compte ?{" "}
           <Link className="font-bold hover:text-blue-500" to="/">
             Inscris-toi
