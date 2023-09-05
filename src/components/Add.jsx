@@ -248,6 +248,3 @@ Est-ce qu’on peut rajouter une rubrique avant toutes les autres questions. Acc
 
 export default InsertData;
 
-}
-
-export default InsertData;
