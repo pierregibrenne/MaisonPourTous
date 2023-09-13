@@ -2,10 +2,6 @@ import React, { Component } from "react";
 
 export default class Sucess extends Component {
   render() {
-    return import React, { Component } from "react";
-
-export default class Sucess extends Component {
-  render() {
     return (
       <div className="flex items-center justify-center h-screen">
         <div className="p-1 rounded shadow-lg bg-gradient-to-r from-purple-500 via-green-500 to-blue-500">
@@ -55,6 +51,4 @@ export default class Sucess extends Component {
     );
   }
 }
-;
-  }
-}
+
