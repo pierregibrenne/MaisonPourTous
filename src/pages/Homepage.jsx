@@ -16,7 +16,7 @@ function HomePage({ token }) {
     navigate("/");
   };
 
-  const [currentView, setCurrentView] = useState("Dashboard");
+  const [currentView, setCurrentView] = useState("Add");
 
   const changeView = (viewName) => {
     setCurrentView(viewName);
@@ -25,7 +25,7 @@ function HomePage({ token }) {
   const renderComponent = () => {
     switch (currentView) {
       case "Add":
-        return <Add />;
+        return <Add userFirstName={token.user.user_metadata.full_name} />;
       case "Delete":
         return <Delete />;
       case "Dashboard":
@@ -54,9 +54,10 @@ function HomePage({ token }) {
           Logout
         </button>
       </div>
-      <div className="w-4/5 bg-blue-500 h--min-full">{renderComponent()}</div>
+      <div className="w-4/5 bg-gray-800 h--min-full">{renderComponent()}</div>
     </div>
   );
 }
 
 export default HomePage;
+
