@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Sucess extends Component {
+export default class Success extends Component {
   render() {
     return (
       <div className="flex items-center justify-center h-screen">
