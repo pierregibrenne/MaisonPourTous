@@ -10,8 +10,14 @@ function InsertData({ userFirstName }) {
   const [accueil, setAccueil] = useState("");
   const [autreRaisonFirst, setAutreRaisonFirst] = useState(""); // Autre raison pour le premier select
   const [autreRaisonSecond, setAutreRaisonSecond] = useState(""); // Autre raison pour le deuxième select
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInsert = async () => {
+    if (!accueil || !sexe || !ageRange || !firstInput || !secondInput) {
+      setErrorMessage("Veuillez remplir toutes les informations requises.");
+      return;
+    }
+    setErrorMessage("");
     const dataToInsert = {
       raison: firstInput === "Autre" ? autreRaisonFirst : firstInput,
       redirection: secondInput === "Autre" ? autreRaisonSecond : secondInput,
@@ -158,6 +164,7 @@ function InsertData({ userFirstName }) {
                 Valider
               </button>{" "}
             </div>{" "}
+            <div className="text-red-700">{errorMessage}</div>
           </form>
         </div>
       )}
@@ -166,3 +173,4 @@ function InsertData({ userFirstName }) {
 }
 
 export default InsertData;
+
