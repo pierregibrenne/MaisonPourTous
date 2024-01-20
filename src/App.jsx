@@ -3,6 +3,8 @@ import { SignUp, Login } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import { useState, useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const App = () => {
   const [token, setToken] = useState(false);
   if (token) {
@@ -26,6 +28,7 @@ const App = () => {
           ""
         )}
       </Routes>
+      <SpeedInsights />
     </div>
   );
 };
