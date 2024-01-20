@@ -101,7 +101,7 @@ const Login = ({ setToken }) => {
         <p className="text-sm font-light text-gray-500 dark:text-gray-400">
           Tu n'as pas de compte ?{" "}
           <Link className="font-bold hover:text-blue-500" to="/">
-            Inscris-toi
+            Inscris-toi !
           </Link>
         </p>
       </div>
