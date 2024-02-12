@@ -1,5 +1,5 @@
 import React from "react";
-import { SignUp, Login } from "./pages";
+import { SignUp, Login, ResetPassword } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import { useState, useEffect } from "react";
@@ -20,6 +20,8 @@ const App = () => {
       <Routes>
         <Route path={"/"} element={<SignUp />} />
         <Route path={"/login"} element={<Login setToken={setToken} />} />
+        <Route path={"/reset-password"} element={<ResetPassword />} />{" "}
+        {/* Nouvelle route pour la réinitialisation du mot de passe */}
         {token ? (
           <Route path={"/homepage"} element={<Homepage token={token} />} />
         ) : (

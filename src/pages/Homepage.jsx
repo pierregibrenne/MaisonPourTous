@@ -15,6 +15,8 @@ function HomePage({ token }) {
     sessionStorage.removeItem("token");
     navigate("/");
   };
+  //verifier que ce sois que avec le mail de MOMO
+  const userEmail = token.user.email;
 
   const [currentView, setCurrentView] = useState("Add");
 
@@ -44,6 +46,7 @@ function HomePage({ token }) {
         <p>Bienvenue {token.user.user_metadata.full_name}</p>
         <br />
         <NavBar
+          userEmail={userEmail}
           changeView={changeView}
           handleLogout={handleLogout}
           welcomeText={welcomeText}
@@ -60,4 +63,3 @@ function HomePage({ token }) {
 }
 
 export default HomePage;
-
