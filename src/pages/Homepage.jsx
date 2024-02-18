@@ -57,7 +57,7 @@ function HomePage({ token }) {
           Logout
         </button>
       </div>
-      <div className="w-4/5 bg-gray-800 h--min-full">{renderComponent()}</div>
+      <div className="w-4/5 bg-white h--min-full">{renderComponent()}</div>
     </div>
   );
 }

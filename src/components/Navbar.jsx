@@ -14,7 +14,7 @@ function NavBar({ userEmail, changeView, handleLogout, welcomeText }) {
   return (
     <div>
       <aside className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-gradient-to-r from-cyan-500 to-blue-500">
           <p className="text-white">{welcomeText}</p> <br />
           <ul className="space-y-2 font-medium">
             {userEmail === "malaoui@fol37.org" ||
