@@ -50,11 +50,11 @@ function InsertData({ userFirstName }) {
   };
 
   return (
-    <div className="bg-blue-950 min-h-screen flex items-center justify-center">
+    <div className="bg-white min-h-screen flex items-center justify-center">
       {success ? (
         <Success />
       ) : (
-        <div className="bg-blue-950 min-h-screen flex items-center justify-center">
+        <div className="bg-white min-h-screen flex items-center justify-center">
           <form className="bg-white p-6 rounded shadow-md w-96">
             <label>{userFirstName}</label> <br />
             <label>Accueil : </label>
