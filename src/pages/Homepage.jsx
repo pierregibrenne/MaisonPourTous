@@ -8,6 +8,7 @@ import Settings from "../components/Settings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import mpt from "../assets/mpt.png";
+
 function HomePage({ token }) {
   let navigate = useNavigate();
   const welcomeText = `Bienvenue ${token.user.user_metadata.full_name} 😊`;
@@ -15,8 +16,6 @@ function HomePage({ token }) {
     sessionStorage.removeItem("token");
     navigate("/");
   };
-  //verifier que ce sois que avec le mail de MOMO
-  const userEmail = token.user.email;
 
   const [currentView, setCurrentView] = useState("Add");
 
@@ -41,23 +40,17 @@ function HomePage({ token }) {
 
   return (
     <div className="flex min-h-screen">
-      <div className="w-1/5  h-min-full">
-        <br />
-        <p>Bienvenue {token.user.user_metadata.full_name}</p>
-        <br />
+      <div className="w-1/5 bg-gray-100 h-full shadow-lg">
         <NavBar
-          userEmail={userEmail}
+          userEmail={token.user.email}
           changeView={changeView}
           handleLogout={handleLogout}
           welcomeText={welcomeText}
-        />
-        <button onClick={handleLogout}>
-          {" "}
-          <FontAwesomeIcon icon={faArrowRightFromBracket} />
-          Logout
-        </button>
+        />        
       </div>
-      <div className="w-4/5 bg-white h--min-full">{renderComponent()}</div>
+      <div className="w-4/5 p-4 overflow-auto"> 
+        {renderComponent()}
+      </div>
     </div>
   );
 }
