@@ -17,8 +17,8 @@ function NavBar({ userEmail, changeView, handleLogout, welcomeText }) {
         <div className="h-full px-3 py-4 overflow-y-auto bg-gradient-to-r from-cyan-500 to-blue-500">
           <p className="text-white">{welcomeText}</p> <br />
           <ul className="space-y-2 font-medium">
-            {userEmail === "malaoui@fol37.org" ||
-              (userEmail === "pierre.gibrenne@protonmail.com" && (
+            {userEmail === "pierre.gibrenne@protonmail.com" ||
+              (userEmail === "malaoui@fol37.org" && (
                 <li className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                     className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
