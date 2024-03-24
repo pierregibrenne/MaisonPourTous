@@ -3,7 +3,7 @@ import { supabase } from "../client";
 import { Link, useNavigate } from "react-router-dom";
 import imageMomo from "../assets/imageMomo.png";
 import logoOfficiel from "../assets/logoOfficiel.png";
-
+import ResetPassword from "./ResetPassword";
 const Login = ({ setToken }) => {
   let navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -42,7 +42,7 @@ const Login = ({ setToken }) => {
       const { error } = await supabase.auth.resetPasswordForEmail(
         emailForReset,
         {
-          redirectTo: "http://localhost:5173/reset-password",
+          redirectTo: "https://maison-pour-tous.vercel.app/reset-password",
         }
       );
       if (error) throw error;
@@ -143,6 +143,7 @@ const Login = ({ setToken }) => {
                 type="text"
                 className="w-full py-2 pl-10 border rounded-md focus:outline-none focus:ring focus:border-blue-300 mb-4"
               />
+              <ResetPassword emailForReset={emailForReset} />
               <button
                 type="submit"
                 className="bg-blue-500 text-white py-2 px-4 w-full rounded-full hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"

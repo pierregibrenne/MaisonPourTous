@@ -24,8 +24,9 @@ const ResetPassword = () => {
   return (
     <div>
       <h2>Réinitialiser le mot de passe</h2>
-      <form onSubmit={handleResetPassword}>
+      <form onSubmit={handleResetPassword} className="">
         <input
+        className="w-full py-2 pl-10 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           type="password"
           placeholder="Nouveau mot de passe"
           value={newPassword}
