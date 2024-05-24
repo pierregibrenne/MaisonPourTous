@@ -14,8 +14,15 @@ function NavBar({ userEmail, changeView, handleLogout, welcomeText }) {
   return (
     <div>
       <aside className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gradient-to-r from-cyan-500 to-blue-500">
-          <p className="text-white">{welcomeText}</p> <br />
+        <div className="h-full px-3 py-4 overflow-y-auto bg-gradient-to-r">
+        {userEmail === "malaoui@fol37.org" && (
+              <div className="avatar online ml-4">
+                <div className="w-12 rounded-full">
+                  <img src="https://media.licdn.com/dms/image/D4E03AQF0HxfsNJKq8A/profile-displayphoto-shrink_800_800/0/1674992707495?e=1721865600&v=beta&t=ssSfhhVk0C26QsDfb9rqeIaR4VwK_8nPfmF1FQp-j9s" alt="User Avatar" />
+                </div>
+              </div>
+            )}
+          <p className="">{welcomeText}</p> <br />
           <ul className="space-y-2 font-medium">
             {userEmail === "pierre.gibrenne@protonmail.com" ||
               (userEmail === "malaoui@fol37.org" && (
@@ -40,9 +47,9 @@ function NavBar({ userEmail, changeView, handleLogout, welcomeText }) {
                 </li>
               ))}
 
-            <li className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <li className="flex items-center p-2 rounded-lg  group">
               <svg
-                className="animate-bounce flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                className="animate-bounce flex-shrink-0 w-5 h-5  transition duration-75"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

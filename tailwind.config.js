@@ -4,5 +4,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ["light", "dark", "synthwave", "bourdon", "emerald", "lofi", "cyberpunk", "retro", "valencia", "dracula"],
+  },
 };
