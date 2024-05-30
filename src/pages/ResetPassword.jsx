@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { supabase } from "../client";
 
 const ResetPassword = () => {
-  const a = 0;
+  const a = 1;
   const [newPassword, setNewPassword] = useState("");
   const [newPasswordVerif, setNewPasswordVerif] = useState("");
 
