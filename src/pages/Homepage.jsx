@@ -8,6 +8,7 @@ import Settings from "../components/Settings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import mpt from "../assets/mpt.png";
+import Evenement from "../components/Evenement";
 
 function HomePage({ token }) {
   let navigate = useNavigate();
@@ -33,6 +34,8 @@ function HomePage({ token }) {
         return <Dashboard />;
       case "Settings":
         return <Settings />;
+      case "Evenement":
+        return <Evenement/>
       default:
         return null;
     }
